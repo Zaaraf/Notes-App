@@ -43,7 +43,7 @@ export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag }: Not
     return (
         <>
             <Row className='align-items-center mb-4'>
-                <Col><h1>&lt;Notes/&gt;</h1></Col>
+                <Col><h2>&lt;Notes/&gt;</h2></Col>
                 <Col xs="auto">
                     <Stack gap={2} direction='horizontal'>
                         <Link to="/new">
@@ -55,6 +55,7 @@ export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag }: Not
             </Row>
             <Form>
                 <Row className='mb-4'>
+                    <h5 className='border-bottom pb-2'>Search Your Notes</h5>
                     <Col>
                         <Form.Group controlId='title'>
                             <Form.Label>Title</Form.Label>
@@ -82,6 +83,7 @@ export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag }: Not
                     </Col>
                 </Row>
             </Form>
+            <h5 className='border-bottom pb-2'>Your Notes</h5>
             <Row xs={1} sm={2} lg={3} xl={4} className='g-3'>
                 {filteredNotes.map(note => (
                     <Col key={note.id}>
